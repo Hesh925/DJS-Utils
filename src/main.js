@@ -1,2 +1,2 @@
 exports.capitalize = require('./utils/capitalize');
-exports.removeDuplicates = require('')
+exports.removeDuplicates = require('./utils/removeDuplicates')
