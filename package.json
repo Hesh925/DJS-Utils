@@ -1,0 +1,15 @@
+{
+  "name": "djs-utils",
+  "version": "0.0.1",
+  "description": "Basic Utils for DJS",
+  "main": "./src/main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "discord",
+    "discordjs"
+  ],
+  "author": "hesh925#1482",
+  "license": "ISC"
+}
