@@ -1,3 +1,5 @@
 const utils = require('../src/main');
+let list = new Array
 
-console.log(utils.capitalizeAll('hi mom im tyler and i line fgood'))
+list = ['bannanan', "apppel", "Peer", "charrry", "pemnis"]
+console.log(utils.fuzzySearch('a', list))

@@ -1,15 +1,17 @@
 {
   "name": "djs-utils",
-  "version": "0.0.1",
-  "description": "Basic Utils for DJS",
+  "version": "1.0.0",
+  "description": "",
   "main": "./src/main.js",
+  "directories": {
+    "test": "test"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [
-    "discord",
-    "discordjs"
-  ],
-  "author": "hesh925#1482",
-  "license": "ISC"
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "fuse.js": "^6.4.6"
+  }
 }
