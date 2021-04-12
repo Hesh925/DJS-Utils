@@ -1,6 +1,5 @@
-
 module.exports = (pattern, list, keys) => {
-    if (keys){
+        if (keys){
         var key = keys
     } else {
         var key = ['']
