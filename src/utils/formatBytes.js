@@ -1,3 +1,8 @@
+/**
+ * Takes number of bytes and formats it into readible format
+ * @param {number} bytes 
+ * @returns {string} Formated bytes.
+ */
 module.exports = (bytes) => {
     if (bytes === 0) return '0 Bytes';
     const sizes = ['Bytes', 'KB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB'];

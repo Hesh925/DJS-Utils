@@ -1,3 +1,10 @@
+/**
+ * 
+ * @param {string} pattern 
+ * @param {object} list 
+ * @param {object} keys 
+ * @returns {object} List of near matches to pattern
+ */
 module.exports = (pattern, list, keys) => {
         if (keys){
         var key = keys
