@@ -7,9 +7,9 @@ const utils = require('../main')
 module.exports = (URL) => {
     if (utils.notNull(URL)) {
         if ((URL.toLowerCase()).startsWith("https://" || "http://")) {
-            return fURL
+            return URL
         } else {
-            fURL = `https://${URL}`
+            var fURL = `https://${URL}`
         }
         return fURL
     } else return null
