@@ -6,11 +6,7 @@
  * @returns {object} List of near matches to pattern
  */
 module.exports = (pattern, list, keys) => {
-        if (keys){
-        var key = keys
-    } else {
-        var key = ['']
-    }
+        var key = keys || ['']
 
     const Fuse = require('fuse.js')
     const options = {
