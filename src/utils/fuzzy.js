@@ -1,5 +1,5 @@
-/**
- * 
+/** Fuzzy Search
+ ** Fuzzy search 
  * @param {string} pattern 
  * @param {object} list 
  * @param {object} keys 

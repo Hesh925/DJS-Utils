@@ -1,6 +1,14 @@
 const urlLengthener = require("url-lengthener")
-const formatURL = require("./formatURL")
+const utils = require('../main')
+/** lengthen URL
+ ** Lengthens a url
+ * @param {string} URL URL to lengthen
+ * @returns {string} Lengthened URL
+ */
 module.exports = (URL) => {
-    let lengthened_url = urlLengthener.lengthen(formatURL(URL));
-    return lengthened_url
+    const fURL = utils.formatURL(URL)
+    if (utils.notNull(fURL)){
+        let lengthened_url = urlLengthener.lengthen();
+        return lengthened_url
+    } else return null
 }
