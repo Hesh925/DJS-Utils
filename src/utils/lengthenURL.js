@@ -8,7 +8,7 @@ const utils = require('../main')
 module.exports = (URL) => {
     const fURL = utils.formatURL(URL)
     if (utils.notNull(fURL)){
-        let lengthened_url = urlLengthener.lengthen();
+        let lengthened_url = urlLengthener.lengthen(fURL);
         return lengthened_url
     } else return null
 }
