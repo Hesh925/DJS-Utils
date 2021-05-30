@@ -1,19 +1,21 @@
 {
   "name": "djs-utils",
   "version": "1.1.0",
-  "description": "",
+  "description": "Utils for DiscordJS or any node project",
   "main": "./src/main.js",
+  "types": "./src/ts/main.d.ts",
   "directories": {
     "test": "test"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node ./test/test.js"
   },
-  "author": "",
+  "author": "Hesh925#1482",
   "license": "ISC",
   "dependencies": {
     "date-and-time": "^1.0.0",
     "fuse.js": "^6.4.6",
-    "pretty-ms": "^7.0.1"
+    "pretty-ms": "^7.0.1",
+    "url-lengthener": "^1.4.3"
   }
 }
