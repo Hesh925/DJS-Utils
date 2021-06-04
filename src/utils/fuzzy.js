@@ -1,20 +1,20 @@
+const Fuse = require('fuse.js')
 /** Fuzzy Search
  ** Fuzzy search 
  * @param {string} pattern 
  * @param {object} list 
- * @param {object} keys 
+ * @param {object} options 
+ * @peram {object} keys
  * @returns {object} List of near matches to pattern
  */
-module.exports = (pattern, list, keys) => {
+module.exports = (pattern, list, options, keys) => {
         var key = keys || ['']
-
-    const Fuse = require('fuse.js')
-    const options = {
-        isCaseSensitive: false,
-        includeScore: false,
-        shouldSort: true,
-        ignoreLocation: true,
-        minMatchCharLength: 1,
+    const sOptions = options || {
+        //isCaseSensitive: false,
+        //includeScore: true,
+        //shouldSort: true,
+        //ignoreLocation: true,
+        //minMatchCharLength: 1,
         //includeMatches: false,
         //findAllMatches: false,
         //location: 0,
@@ -24,7 +24,6 @@ module.exports = (pattern, list, keys) => {
         //ignoreFieldNorm: false,
         keys: [key]
      };
-    const fuse = new Fuse(list, options);
-    const search = fuse.search(pattern)
-    return search;
+    const fuses = new Fuse(list, sOptions)
+    return fuses.search(pattern);
 }
