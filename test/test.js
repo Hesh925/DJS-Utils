@@ -1,8 +1,9 @@
+/* eslint-disable no-unused-vars */
 const utils = require('../src/main');
 const fs = require("fs")
 const returns = require('./returns.json')
 
-utils.log("pemid")
+utils.log("penis")
 
 /*JSON.stringify(returns, (key, value) => {
     for (let i = 0; i < 10; i++) {

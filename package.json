@@ -1,12 +1,8 @@
 {
   "name": "djs-utils",
   "version": "1.1.0",
-<<<<<<< Updated upstream
-  "description": "Utils for DiscordJS or any node project",
-  "private": true,
-=======
   "description": "Utils for DiscordJS",
->>>>>>> Stashed changes
+  "private": true,
   "main": "./src/main.js",
   "scripts": {
     "test": "node ./test/test.js"
