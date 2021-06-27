@@ -1,5 +1,5 @@
 //exports. = require('')
-exports.capitalise = require('./utils/capitalize');
+exports.capitalize = require('./utils/capitalize');
 exports.removeDuplicates = require('./utils/removeDuplicates')
 exports.isBotOwner = require('./utils/isBotOwner')
 exports.isGuildOwner = require('./utils/isGuildOwner')
