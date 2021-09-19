@@ -4,24 +4,17 @@ const fileName = "message.log";
 const dir = "./log/";
 
 module.exports = (message) => {
-
 	function write() {
-		var content = `[ ${ utils.getDate() } ]: ${ message.author.tag } => "${ message.content }"\n`;
-		fs.writeFile((dir.concat(fileName)), content, {
-			flag: "a+"
-		}, err => {
+		var content = `[ ${ utils.getDate() } ]: ${ message.author.tag } (${ message.channelId }) => "${ message.content }"\n`;
+		fs.writeFile((dir.concat(fileName)), content, { flag: "a+" }, err => {
 			if (err) return false;
-			else {
-				console.log(content);
-				return true;
-			}
+			else return true;
 		});
 	}
 
 	if (utils.notNull(message)) {
-		if (fs.existsSync(dir)) {
-			write();
-		} else {
+		if (fs.existsSync(dir)) write();
+		else {
 			fs.mkdirSync(dir);
 			write();
 		}
