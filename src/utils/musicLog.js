@@ -1,17 +1,16 @@
 const fs = require("fs");
 const utils = require("../main.js");
-const fileName = "client.log";
+const fileName = "music.log";
 const dir = "./log/";
 
 module.exports = (message) => {
 	function write() {
-		var content = `[ ${ utils.getDate() } ]: "${ message }"\n`;
+		var content = `[ ${ utils.getDate() } ]: Playing "${ message }"\n`;
 		fs.writeFile((dir.concat(fileName)), content, {
 			flag: "a+"
 		}, err => {
 			if (err) return false;
 			else {
-				console.log(content);
 				return true;
 			}
 		});

@@ -13,6 +13,11 @@
     "date-and-time": "^1.0.0",
     "fuse.js": "^6.4.6",
     "pretty-ms": "^7.0.1",
-    "url-lengthener": "^1.4.3"
+    "url-lengthener": "^1.4.3",
+    "ytdl": "^1.4.1",
+    "ytsr": "^3.5.3"
+  },
+  "devDependencies": {
+    "eslint": "^7.32.0"
   }
 }

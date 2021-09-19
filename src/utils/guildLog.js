@@ -1,19 +1,14 @@
-const fs = require('fs')
-const utils = require('../main.js')
+const fs = require("fs");
+const utils = require("../main.js");
 
-/** Guild Log
- ** Log message to guildlog.log
- * @param {String} message
- * @returns {boolean} True if successful
- */
 module.exports = (message) => {
-    if (utils.notNull(message)) {
-        var content = `${utils.getDate()} | ${message}\n`
-        fs.writeFile(`./log/guild.log`, content, {
-            flag: 'a+'
-        }, err => {
-            if (err) return false
-            else return true
-        })
-    } else return false
-}
+	if (utils.notNull(message)) {
+		var content = `${ utils.getDate() } | ${ message }\n`;
+		fs.writeFile("./log/guild.log", content, {
+			flag: "a+"
+		}, err => {
+			if (err) return false;
+			else return true;
+		});
+	} else return false;
+};

@@ -1,11 +1,12 @@
 const fs = require("fs");
 const utils = require("../main.js");
-const fileName = "client.log";
+const fileName = "message.log";
 const dir = "./log/";
 
 module.exports = (message) => {
+
 	function write() {
-		var content = `[ ${ utils.getDate() } ]: "${ message }"\n`;
+		var content = `[ ${ utils.getDate() } ]: ${ message.author.tag } => "${ message.content }"\n`;
 		fs.writeFile((dir.concat(fileName)), content, {
 			flag: "a+"
 		}, err => {
