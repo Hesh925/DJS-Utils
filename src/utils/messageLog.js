@@ -13,10 +13,12 @@ module.exports = (message) => {
 	}
 
 	if (utils.notNull(message)) {
-		if (fs.existsSync(dir)) write();
-		else {
-			fs.mkdirSync(dir);
-			write();
+		if (!message.author.bot) {
+			if (fs.existsSync(dir)) write();
+			else {
+				fs.mkdirSync(dir);
+				write();
+			}
 		}
 	} else return false;
 };
