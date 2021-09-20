@@ -1,5 +1,4 @@
-const config = require("../config/CONFIG.json");
-module.exports = (client) => {
+module.exports = (client, config) => {
 	const types = [ "PLAYING", "STREAMING", "LISTENING", "WATCHING", "COMPETING" ];
 	const env = process.argv.slice(2)[0] === "-dev" ? "dev" : "prod";
 	
