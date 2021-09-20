@@ -13,4 +13,5 @@ exports.messageLog = require("./utils/messageLog");
 exports.musicLog = require("./utils/musicLog");
 exports.notNull = require("./utils/notUNDorNULL");
 exports.removeDuplicates = require("./utils/removeDuplicates");
+exports.setRichPresence = require('./utils/setRichPresence.js')
 exports.ytSearch = require("./utils/ytSearch");
