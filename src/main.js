@@ -14,4 +14,5 @@ exports.musicLog = require("./utils/musicLog");
 exports.notNull = require("./utils/notUNDorNULL");
 exports.removeDuplicates = require("./utils/removeDuplicates");
 exports.searchArgv = require("./utils/searchArgv");
+exports.setRichPresence = require("./utils/setRichPresence");
 exports.ytSearch = require("./utils/ytSearch");
