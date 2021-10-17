@@ -2,7 +2,6 @@
   "name": "djs-utils",
   "version": "1.1.0",
   "description": "Utils for DiscordJS",
-  "private": true,
   "main": "./src/main.js",
   "scripts": {
     "test": "node ./test/test.js"
