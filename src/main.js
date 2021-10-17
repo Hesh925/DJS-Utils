@@ -5,7 +5,6 @@ exports.formatURL = require("./utils/formatURL");
 exports.fuzzySearch = require("./utils/fuzzy");
 exports.getDate = require("./utils/getDate");
 exports.guildLog = require("./utils/guildLog");
-exports.isBotOwner = require("./utils/isBotOwner");
 exports.isGuildOwner = require("./utils/isGuildOwner");
 exports.lengthenURL = require("./utils/lengthenURL");
 exports.log = require("./utils/log");
