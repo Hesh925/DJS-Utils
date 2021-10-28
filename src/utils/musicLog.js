@@ -5,8 +5,8 @@ const dir = "./log/";
 
 module.exports = (message) => {
 	function write() {
-		var content = `[ ${ utils.getDate() } ]: Playing "${ message }"\n`;
-		fs.writeFile((dir.concat(fileName)), content, {
+		var content = `[ ${ utils.getDate() } ]: Playing "${ message }"`;
+		fs.writeFile((dir.concat(fileName)), `${ content }\n`, {
 			flag: "a+"
 		}, err => {
 			if (err) return false;

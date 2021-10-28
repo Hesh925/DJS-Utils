@@ -1,2 +1,3 @@
 /.github
 /.eslintrc.json
+./node_modules
