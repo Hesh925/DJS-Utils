@@ -1,3 +1,4 @@
+const utils = require("../main.js");
 module.exports = (client, config) => {
 	const types = [ "PLAYING", "STREAMING", "LISTENING", "WATCHING", "COMPETING" ];
 	const env = utils.searchArgv("env", true) === "dev" ? "dev" : "prod";
