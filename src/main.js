@@ -11,6 +11,7 @@ exports.log = require("./utils/log");
 exports.messageLog = require("./utils/messageLog");
 exports.musicLog = require("./utils/musicLog");
 exports.notNull = require("./utils/notUNDorNULL");
+exports.pm2 = require("./utils/pm2");
 exports.removeDuplicates = require("./utils/removeDuplicates");
 exports.searchArgv = require("./utils/searchArgv");
 exports.setRichPresence = require("./utils/setRichPresence");
