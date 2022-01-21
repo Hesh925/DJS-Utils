@@ -27,6 +27,16 @@ const APIERR = io.counter({
 	id: "app/stats/api/errors"
 });
 
+const PENDINT = io.counter({
+	name: "Pending Interactions",
+	id: "app/stats/interactions/pending"
+});
+
+const COMPINT = io.counter({
+	name: "Completed Interactions",
+	id: "app/stats/interactions/completed"
+});
+
 // USER METRICS //
 
 const USRTOTAL = io.metric({
@@ -111,10 +121,21 @@ function apiError() {
 	APIERR.inc();
 }
 
+function pendInt() {
+	PENDINT.inc();
+}
+
+function compInt() {
+	PENDINT.dec();
+	COMPINT.inc();
+}
+
 module.exports = {
 	incMessages,
 	rateLimit,
 	apiError,
 	setData,
+	pendInt,
+	compInt,
 	init
 };
