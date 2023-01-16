@@ -8,6 +8,7 @@ exports.guildLog = require("./utils/guildLog");
 exports.isGuildOwner = require("./utils/isGuildOwner");
 exports.lengthenURL = require("./utils/lengthenURL");
 exports.log = require("./utils/log");
+exports.logToDiscord = require("./utils/logToDiscord");
 exports.messageLog = require("./utils/messageLog");
 exports.musicLog = require("./utils/musicLog");
 exports.notNull = require("./utils/notUNDorNULL");
