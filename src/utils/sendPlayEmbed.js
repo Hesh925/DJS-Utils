@@ -11,5 +11,5 @@ module.exports = (client, EmbedBuilder, guild, text, videoData) => {
 		.setImage(videoData.bestThumbnail.url)
 		.setColor("1049ed")
 		.setTimestamp();
-	client.guilds.cache.get(guild).channels.cache.get(text).send({ embed: [embed] });
+	client.guilds.cache.get(guild).channels.cache.get(text).send({ embeds: [embed] });
 };
