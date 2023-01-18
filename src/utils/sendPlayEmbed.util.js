@@ -1,7 +1,6 @@
-const { EmbedBuilder } = require('discord.js');
-const numberWithCommas = require('./numberWithCommas.util.js');
+const numberWithCommas = require("./numberWithCommas.js");
 module.exports = {
-	embed(videoData) {
+	embed(client, EmbedBuilder, guild, text, videoData) {
 		const embed = new EmbedBuilder()
 			.setTitle(String(videoData.title))
 			.setURL(videoData.url)
@@ -12,8 +11,7 @@ module.exports = {
 			**Uploaded:** ${ videoData.uploadedAt }`)
 			.setImage(videoData.bestThumbnail.url)
 			.setColor("1049ed")
-			.setTimestamp()
-			.setFooter({ text: `Requested by: ${ interaction.user.username }`,  iconURL: interaction.user.displayAvatarURL({ dynamic: true })});
-		interaction.editReply({ embeds: [ embed ] });
+			.setTimestamp();
+		client.guilds.cache.get(guild).channels.cache.get(text).send({ embed: embed });
 	}
 };

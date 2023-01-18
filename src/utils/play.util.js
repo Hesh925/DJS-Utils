@@ -1,6 +1,6 @@
 const sendEmbed = require("./sendPlayEmbed.js");
 module.exports = {
-	async play(client, DJSVoice, voicePlayer, guildID, textCID, searchFor, nowPlaying, utils, ytsr, ytdl){
+	async play(client, EmbedBuilder, DJSVoice, voicePlayer, guildID, textCID, searchFor, nowPlaying, utils, ytsr, ytdl){
 		const connection = await DJSVoice.getVoiceConnection(guildID); // Get connection
 		connection.subscribe(voicePlayer); // Create subscription
 		
@@ -31,7 +31,7 @@ module.exports = {
 			});
 			voicePlayer.play(resource);
 			utils.musicLog(videoData.title);
-			sendEmbed(client, guildID, textCID, videoData);
+			sendEmbed(client, EmbedBuilder, guildID, textCID, videoData);
 		}
 	}
 };
