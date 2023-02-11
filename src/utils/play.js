@@ -1,5 +1,5 @@
 const sendEmbed = require("./sendPlayEmbed.js");
-module.exports = async (client, EmbedBuilder, DJSVoice, voicePlayer, guildID, textCID, searchFor, nowPlaying, utils, ytsr, ytdl) => {
+module.exports = async (client, EmbedBuilder, DJSVoice, voicePlayer, guildID, textCID, searchFor, nowPlaying, utils, ytsr, ytdl, res) => {
 	const connection = await DJSVoice.getVoiceConnection(guildID); // Get connection
 	connection.subscribe(voicePlayer); // Create subscription
 	
@@ -11,7 +11,7 @@ module.exports = async (client, EmbedBuilder, DJSVoice, voicePlayer, guildID, te
 	if(resp !== null) {
 		const videoData = resp["items"][0];
 		nowPlaying["0"] = videoData;
-		
+
 		const resource = DJSVoice.createAudioResource(ytdl(videoData.url, 
 			{
 				filter: "audioonly", 
@@ -24,7 +24,8 @@ module.exports = async (client, EmbedBuilder, DJSVoice, voicePlayer, guildID, te
 				title:   videoData.title,
 				url:     videoData.url,
 				guildId: guildID,
-				textCId: textCID
+				textCId: textCID,
+				queuePos: (res !== null ? res.queuePos : 0)
 			},
 			volume: 0.2
 		});
