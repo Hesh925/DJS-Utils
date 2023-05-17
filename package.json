@@ -12,6 +12,7 @@
     "@pm2/io": "^5.0.0",
     "date-and-time": "^1.0.0",
     "fuse.js": "^6.4.6",
+    "parse-ms": "^3.0.0",
     "pretty-ms": "^7.0.1",
     "url-lengthener": "^1.4.3",
     "ytdl": "^1.4.1",

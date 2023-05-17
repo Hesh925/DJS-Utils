@@ -4,24 +4,24 @@ const fileName = "music.log";
 const dir = "./log/";
 
 module.exports = (message) => {
-	function write() {
-		var content = `[ ${ utils.getDate() } ]: Playing "${ message }"`;
-		fs.writeFile((dir.concat(fileName)), `${ content }\n`, {
-			flag: "a+"
-		}, err => {
-			if (err) return false;
-			else {
-				return true;
-			}
-		});
-	}
+    function write() {
+        var content = `[ ${ utils.getDate() } ]: Playing "${ message }"`;
+        fs.writeFile((dir.concat(fileName)), `${ content }\n`, {
+            flag: "a+"
+        }, err => {
+            if (err) return false;
+            else {
+                return true;
+            }
+        });
+    }
 
-	if (utils.notNull(message)) {
-		if (fs.existsSync(dir)) {
-			write();
-		} else {
-			fs.mkdirSync(dir);
-			write();
-		}
-	} else return false;
+    if (utils.notNull(message)) {
+        if (fs.existsSync(dir)) {
+            write();
+        } else {
+            fs.mkdirSync(dir);
+            write();
+        }
+    } else return false;
 };

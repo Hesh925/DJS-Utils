@@ -1,5 +1,6 @@
 
 module.exports = (object) => {
-	if (object === undefined || null) return false;
-	else return true;
+    // eslint-disable-next-line no-undefined
+    if (object === undefined || null) return false;
+    else return true;
 };
