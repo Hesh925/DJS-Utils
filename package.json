@@ -9,7 +9,6 @@
   "author": "Hesh925#1482",
   "license": "ISC",
   "dependencies": {
-    "@pm2/io": "^5.0.0",
     "date-and-time": "^1.0.0",
     "fuse.js": "^6.4.6",
     "parse-ms": "^3.0.0",

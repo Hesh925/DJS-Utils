@@ -14,7 +14,6 @@ exports.musicLog = require("./utils/musicLog");
 exports.notNull = require("./utils/notUNDorNULL");
 exports.numberWithCommas = require("./utils/numberWithCommas");
 exports.play = require("./utils/play");
-exports.pm2 = require("./utils/pm2");
 exports.removeDuplicates = require("./utils/removeDuplicates");
 exports.searchArgv = require("./utils/searchArgv");
 exports.sendPlayEmbed = require("./utils/sendPlayEmbed");
